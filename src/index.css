@@ -1,0 +1,32 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer {
+  * {
+    @apply m-0 box-border;
+  }
+
+  .nav-links {
+    @apply m-4 text-white;
+  }
+
+  nav > div {
+    @apply md:mx-12 mx-6;
+  }
+
+  .navOpen {
+    @apply block;
+  }
+  .navClose {
+    @apply hidden;
+  }
+
+  .menu-li {
+    @apply p-2 my-[.3rem] rounded-md cursor-pointer hover:bg-[#f6f6f6] hover:text-lg hover:pl-2 hover:text-[#69a5ec] ease-in duration-300;
+  }
+
+  .download-afrikamp a {
+    @apply w-3/4 bg-[#5865f2] p-3 text-center flex justify-center rounded-3xl absolute bottom-2;
+  }
+}
