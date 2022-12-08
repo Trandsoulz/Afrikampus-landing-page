@@ -2,6 +2,7 @@ import { AiOutlineAlignRight } from "react-icons/ai";
 import { FaTimes } from "react-icons/fa";
 import { FiDownload } from "react-icons/fi";
 import { useEffect, useLayoutEffect, useRef, useState } from "react";
+import logo from "../assets/AFRIKAMP-logo.png";
 
 const Navbar = () => {
   //   // Navbar open and close function
@@ -15,38 +16,40 @@ const Navbar = () => {
 
   return (
     <>
-      <nav className="flex w-full py-4 justify-between md:justify-center font-sans font-[500] text-xl text-white">
+      <nav className="flex w-full md:py-4 md:pb-0 py-1 pb-8 justify-between lg:justify-around font-sans font-[500] text-xl text-white">
         <div className="pt-2">
-          <h2>Logo</h2>
+          <img src={logo} alt="" className="w-[190px]" />
         </div>
-        <div className="text-white pt-2 text-[14px] hidden md:block">
+        <div className="text-white pt-2 text-[14px] my-auto hidden lg:block">
           <a href="/" className="nav-links hover:underline underline-offset-2">
-            Download
-          </a>
-          <a href="/" className="nav-links hover:underline underline-offset-2">
-            Nitro
-          </a>
-          <a href="/" className="nav-links hover:underline underline-offset-2">
-            Discover
-          </a>
-          <a href="/" className="nav-links hover:underline underline-offset-2">
-            Safety
-          </a>
-          <a href="/" className="nav-links hover:underline underline-offset-2">
-            Support
+            Home
           </a>
           <a href="/" className="nav-links hover:underline underline-offset-2">
             Blog
           </a>
           <a href="/" className="nav-links hover:underline underline-offset-2">
-            Careers
+            Community
+          </a>
+          <a href="/" className="nav-links hover:underline underline-offset-2">
+            Support
+          </a>
+          <a
+            href="http://"
+            className="rounded-3xl bg-[#9747FF] bg-opacity-50 text-white px-6 py-3 text-[15px] font-medium hover:cursor-pointer"
+          >
+            Join Community
           </a>
         </div>
-        <div className="flex">
-          <span className="rounded-3xl bg-slate-100 text-black px-4 py-2 text-[15px] font-medium hover:cursor-pointer">
-            <a href="http://">Open Afrikamp</a>
+        <div className="flex lg:hidden my-auto">
+          <span>
+            <a
+              href="http://"
+              className="rounded-3xl bg-slate-100 text-black px-4 py-2 text-[15px] font-medium hover:cursor-pointer"
+            >
+              Support
+            </a>
           </span>
-          <span className="mt-[7px] ml-6 md:hidden">
+          <span className="mt-[7px] ml-6 lg:hidden">
             <AiOutlineAlignRight
               className="text-3xl hover:cursor-pointer"
               onClick={() => setShowSideBar(true)}
@@ -56,7 +59,7 @@ const Navbar = () => {
       </nav>
 
       {showSideBar ? (
-        <aside className="aside h-full w-[330px] bg-white fixed top-0 right-0 md:hidden">
+        <aside className="aside h-full w-[330px] z-20 bg-white fixed top-0 right-0 lg:hidden">
           <div className="m-6 flex justify-between">
             <h2 className="text-xl">Logo</h2>
             <FaTimes

@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;600;700;800;900&family=Open+Sans&display=swap");
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -29,4 +31,12 @@
   .download-afrikamp a {
     @apply w-3/4 bg-[#5865f2] p-3 text-center flex justify-center rounded-3xl absolute bottom-2;
   }
+
+  .footer-heading > h1 {
+    @apply text-base;
+  }
+
+  /* .footer-heading > a {
+    @apply leading-5;
+  } */
 }
